@@ -19,7 +19,8 @@ import client from '@/plugins/contentful'
 export default {
   asyncData() {
     return client.getEntries({
-      content_type: 'post'
+      content_type: 'post',
+      order: '-sys.createdAt',
     }).then(entries => {
       return { posts: entries.items }
     })
