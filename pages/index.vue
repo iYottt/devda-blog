@@ -27,7 +27,7 @@ export default {
     .catch(e => console.log(e))
   },
   head: {
-    title: 'Latest Post'
+    title: 'Devda'
   }
 }
 </script>
