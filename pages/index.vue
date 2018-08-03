@@ -1,16 +1,8 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="colums">
-        <div class="is-offset-2 is-8">
-          <h1 class="title is-2">Latest Posts</h1>
-          <hr>
-          <h2 class="title is-4" v-for="(post, index) in posts" :key="index">
-            <nuxt-link :to="post.fields.slug">{{ post.fields.title }}</nuxt-link>
-          </h2>
-        </div>
-      </div>
-    </div>
+  <section>
+    <p class="title is-6" v-for="(post, index) in posts" :key="index">
+      <nuxt-link :to="post.fields.slug">{{ post.fields.title }}</nuxt-link>
+    </p>
   </section>
 </template>
 

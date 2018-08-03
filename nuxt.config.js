@@ -23,12 +23,13 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FFFFFF' },
+  loading: { color: '#1B95E0' },
 
   /*
   ** Global CSS
   */
   css: [
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' }
   ],
 
   /*
@@ -47,7 +48,10 @@ module.exports = {
     '@nuxtjs/markdownit',
   ],
   markdownit: {
-    injected: true
+    injected: true,
+    use: [
+      'markdown-it-highlightjs'
+    ]
   },
   /*
   ** Axios module configuration
